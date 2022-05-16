@@ -5,7 +5,7 @@
         if (fromTop > $('.navbar').height()) $('.navbar').addClass('minimized');
         else $('.navbar').removeClass('minimized');
     });
-}
+});
 
 $(function () {
     var topoffset = 80; //variable for menu height
