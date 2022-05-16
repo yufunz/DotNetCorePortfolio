@@ -11,11 +11,11 @@
         </a>
         <div class="collapse navbar-collapse" id="togglerNav">
           <div class="navbar-nav ms-auto">
-            <a class="nav-item nav-link" href="@Url.Action("Index", "Home")#page-hero">Home</a>
-            <a class="nav-item nav-link" href="@Url.Action("Index", "About")#page-about">About</a>
-            <a class="nav-item nav-link" href="@Url.Action("Index", "Portfolio")#page-portfolio">Portfolio</a>
-            <a class="nav-item nav-link" href="@Url.Action("Index", "Experience")#page-experience">Experience</a>
-            <a class="nav-item nav-link" href="@Url.Action("Index", "Contact")#page-contact">Contact</a>
+            @Html.ActionLink("Home", "Index", "Home", null, null, "page-hero", null, new { @class = "nav-item nav-link"})
+            @Html.ActionLink("About", "Index", "Home", null, null, "page-about", null, new { @class = "nav-item nav-link"})
+            @Html.ActionLink("Portfolio", "Index", "Home", null, null, "page-portfolio", null, new { @class = "nav-item nav-link"})
+            @Html.ActionLink("Experience", "Index", "Home", null, null, "page-experience", null, new { @class = "nav-item nav-link"})
+            @Html.ActionLink("Contact", "Index", "Home", null, null, "page-contact", null, new { @class = "nav-item nav-link"})
           </div><!-- navbar-nav -->
         </div><!-- collapse -->
       </div><!-- container -->

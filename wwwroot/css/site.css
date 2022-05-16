@@ -34,11 +34,11 @@ body {
     font-family: var(--font-family-sans-serif);
     font-size: medium;
     color: var(--light-gray);
-    height: 60vh;
-    background: linear-gradient(180deg, rgba(32,32,32,1) 0%, rgba(32,32,32,0.1) 100%), url(../img/banner.jpg);
+    background: linear-gradient(135deg, rgba(32,32,32,1) 0%, rgba(32,32,32,0.1) 100%), url(../img/banner.jpg);
     background-position: center 75%;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 500px;
 }
 
 .fs_banner {
@@ -57,6 +57,23 @@ body {
 
 nav, .dropdown-menu {
     background-color: rgba(32, 32, 32, 0.5);
+}
+
+.page-heading {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.page-heading:after {
+    position: absolute;
+    content: '';
+    width: 10%;
+    height: 3px;
+    background: var(--dark-orange);
+    left: 45%;
+    bottom: -18%;
 }
 
 .v-divider {
@@ -135,6 +152,10 @@ nav, .dropdown-menu {
 
 .nav-brand-text:hover {
     transform: scaleX(1.1);
+}
+
+.about {
+    font-size: 22px;
 }
 
 .minimized {
