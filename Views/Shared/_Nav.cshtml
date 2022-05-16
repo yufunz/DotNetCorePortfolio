@@ -1,0 +1,23 @@
+﻿<header id="page-hero" class="site-header">
+    <nav id="navbar-site" class="site-nav family-serif navbar navbar-dark navbar-expand-md fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#togglerNav" aria-controls="togglerNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="nav-brand-text navbar-brand" href="#page-hero">
+          <i class="bi bi-code-square"></i><span id="hero-text" class="d-inline d-md-none d-lg-inline"> yufuNZ</span>
+        </a>
+        <div class="collapse navbar-collapse" id="togglerNav">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-item nav-link" href="@Url.Action("Index", "Home")#page-hero">Home</a>
+            <a class="nav-item nav-link" href="@Url.Action("Index", "About")#page-about">About</a>
+            <a class="nav-item nav-link" href="@Url.Action("Index", "Portfolio")#page-portfolio">Portfolio</a>
+            <a class="nav-item nav-link" href="@Url.Action("Index", "Experience")#page-experience">Experience</a>
+            <a class="nav-item nav-link" href="@Url.Action("Index", "Contact")#page-contact">Contact</a>
+          </div><!-- navbar-nav -->
+        </div><!-- collapse -->
+      </div><!-- container -->
+    </nav>
+  </header>

@@ -1,18 +1,142 @@
-html {
-  font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Proza+Libre:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+:root {
+    /* Override variables */
+    --font-family-sans-serif: 'Proza Libre', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+    /* Page variables */
+    --light-gray: #f1f1f1;
+    --very-light-gray: #e9e9e9;
+    --dark-gray: #202020;
+    --mostly-black: #1c1c1c;
+    --dark-orange: #9c8265;
+    --font-family-serif: 'Cormorant Garamond', serif;
+    --color-text: var(--light-gray);
+    --color-text-dark: var(--mostly-black);
+    --color-bg-light-gray: var(--very-light-gray);
+    --color-bg-dark-gray: var(--dark-gray);
+    --font-family-text: var(--font-family-serif);
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+.family-serif {
+    font-family: var(--font-family-sans-serif);
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: var(--font-family-sans-serif);
+    color: var(--color-text-dark);
+    background-color: #fff;
+    font-weight: 400;
+    background-image: url(../img/triangle_bg.png);
+}
+
+.site-header {
+    font-family: var(--font-family-sans-serif);
+    font-size: medium;
+    color: var(--light-gray);
+    height: 50vh;
+    background: url(../img/banner.jpg);
+    background-position: center 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav, .dropdown-menu {
+    background-color: rgba(32, 32, 32, 0.5);
+}
+
+.v-divider {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #fafafa;
+}
+
+@media screen and (max-width: 768px) {
+    .site-header {
+        height: 40vh;
+    }
+
+    .navbar {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        min-height: 50px !important;
+        background-color: rgba(32, 32, 32, 0.9);
+    }
+
+    #hero-text {
+        font-size: 25px;
+    }
+
+    #logo {
+        font-size: smaller;
+    }
+}
+
+/*
+    Add nav menu hover underline effect
+*/
+@media screen and (min-width: 768px) {
+    .site-header .nav-link {
+        position: relative;
+        padding-bottom: 0;
+        margin-bottom: 2px;
+    }
+
+    .site-header .nav-link:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background-color: #fafafa;
+        visibility: hidden;
+        ;
+        transform: scaleX(0);
+        transition: all 0.3s ease-out;
+    }
+
+    .site-header .nav-link:hover:before {
+        visibility: visible;
+        left: 0;
+        transform: scaleX(1);
+    }
+}
+
+.site-nav {
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.nav-brand-text {
+    font-size: 35px;
+    transition: transform .3s
+}
+
+.nav-brand-text:hover {
+    transform: scaleX(1.1);
+}
+
+.minimized {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 50px !important;
+    background-color: var(--color-bg-dark-gray);
+}
+
+.site-footer {
+    font-size: 0.8em;
+    color: #fff;
+    background-color: var(--color-bg-dark-gray);
+}
+
+.layout-social .layout-icon {
+    font-size: 1.5em;
 }
