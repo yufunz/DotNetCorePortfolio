@@ -11,10 +11,6 @@
     --mostly-black: #1c1c1c;
     --dark-orange: #9c8265;
     --font-family-serif: 'Cormorant Garamond', serif;
-    --color-text: var(--light-gray);
-    --color-text-dark: var(--mostly-black);
-    --color-bg-light-gray: var(--very-light-gray);
-    --color-bg-dark-gray: var(--dark-gray);
     --font-family-text: var(--font-family-serif);
 }
 
@@ -154,23 +150,39 @@ nav, .dropdown-menu {
     transform: scaleX(1.1);
 }
 
+/*
 .about {
     font-size: 22px;
+}
+*/
+
+.skill {
+    background-color: var(--very-light-gray);
+}
+
+.progress {
+    height: 10px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: var(--dark-orange);
 }
 
 .minimized {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     min-height: 50px !important;
-    background-color: var(--color-bg-dark-gray);
+    background-color: var(--dark-gray);
 }
 
 .site-footer {
     font-size: 0.8em;
     color: #fff;
-    background-color: var(--color-bg-dark-gray);
+    background-color: var(--dark-gray);
 }
 
 .layout-social .layout-icon {
-    font-size: 1.5em;
+    font-size: 1.8em;
 }

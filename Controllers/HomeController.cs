@@ -1,21 +1,25 @@
 ﻿using DotNetCorePortfolio.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using DotNetCorePortfolio.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DotNetCorePortfolio.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
-
-        public IActionResult Index()
+        
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var model = new ListModel();
+            model.SkillModel = await _context.Skill.ToListAsync();
+            return View(model);
         }
 
         public IActionResult Privacy()

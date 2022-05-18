@@ -1,4 +1,5 @@
-﻿@{
+﻿@model DotNetCorePortfolio.Models.ListModel
+@{
     ViewData["Name"] = "yufuNZ";
 }
 
@@ -18,13 +19,14 @@
 <!-- about -->
 <section class="py-5 about" id="page-about">
     <div class="container py-3">
-        <h3 class="page-heading">About Me</h3>
+        <h2 class="page-heading">About Me</h2>
         <div class="row">
             <div class="col-lg-6 mt-5 text-center">
                 <p class="fs-1"><strong>@ViewData["Name"]</strong></p>
                 <p class="fs-3">Software Developer</p>
-                <p class="text-muted">
-                    I have a diverse set of skills, ranging from Web development (HTML, CSS, and JavaScript), to C# and Android development and Linux administration.
+                <p class="fs-5 text-muted">
+                    I have a diverse set of skills, ranging from Web development (HTML, CSS, and JavaScript), to 
+                    C# and Android development and Linux administration.
                 </p>
             </div>
             <div class="col-lg-6 text-center">
@@ -34,3 +36,23 @@
     </div>
 </section>
 <!-- about -->
+<!-- skill -->
+<section class="py-5 skill" id="page-skill">
+    <div class="container py-3">
+        <h2 class="page-heading">Skills</h2>
+        <div class="row">
+            @foreach (Skill skill in Model.SkillModel)
+            {   
+                <div class="col-6 col-md-4 p-3">
+                    <h3>@skill.Name</h3>
+                    <div class="progress border border-secondary bg-transparent">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                        aria-valuenow="@skill.Percentage" aria-valuemin="0" aria-valuemax="100" style="width: @skill.Percentage%">
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- skill -->
