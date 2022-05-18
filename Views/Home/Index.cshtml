@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 fs_banner banner_margin">
-                <p>Hello, world!</p>
+                <p class="font-monospace text-white">Hello, world!</p>
                 <p>My name is @ViewData["Name"]</p>
                 <p><i class="bi bi-hash"></i><i>Software Developer</i></p>
             </div>
@@ -24,7 +24,7 @@
             <div class="col-lg-6 mt-5 text-center">
                 <p class="fs-1"><strong>@ViewData["Name"]</strong></p>
                 <p class="fs-3">Software Developer</p>
-                <p class="fs-5 text-muted">
+                <p class="text-muted about-text">
                     I have a diverse set of skills, ranging from Web development (HTML, CSS, and JavaScript), to 
                     C# and Android development and Linux administration.
                 </p>
@@ -56,3 +56,44 @@
     </div>
 </section>
 <!-- skill -->
+<!-- project -->
+<section class="py-5 project" id="page-project">
+    <div class="container py3">
+        <h2 class="page-heading">Projects</h2>
+        <div class="row justify-content-center mt-5">
+            @foreach (Project project in Model.ProjectModel)
+            {
+                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                    <div class="card">
+                        <img src="@project.Thumbnail" alt="@project.Title" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="card-title">@project.Title</h5>
+                            <p class="card-text">@project.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- project -->
+<!-- Experience -->
+<section class="py-5 experience" id="page-experience">
+    <div class="container py3">
+        <h2 class="mb-5 page-heading">Experiences</h2>
+        @foreach (Experience experience in Model.ExperienceModel)
+        {
+            <div class="row mb-3">
+                <div class="col-md-3 p-3 exp-heading">
+                    <h4>@experience.Title</h4>
+                    <h5 class="fs-6">@experience.Duration</h5>
+                </div>
+                <div class="col-md-9 mt-4">
+                    <p class="experience-text">@experience.Description</p>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+<!-- Experience -->
+

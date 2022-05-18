@@ -19,6 +19,9 @@ namespace DotNetCorePortfolio.Controllers
         {
             var model = new ListModel();
             model.SkillModel = await _context.Skill.ToListAsync();
+            model.ExperienceModel = await _context.Experience.ToListAsync();
+            model.ProjectModel = await _context.Project.ToListAsync();
+
             return View(model);
         }
 

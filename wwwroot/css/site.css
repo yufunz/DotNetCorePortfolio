@@ -150,14 +150,14 @@ nav, .dropdown-menu {
     transform: scaleX(1.1);
 }
 
-/*
-.about {
-    font-size: 22px;
+.about-text {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: lighter;
 }
-*/
 
 .skill {
-    background-color: var(--very-light-gray);
+    background-color: rgba(32, 32, 32, 0.1);
 }
 
 .progress {
@@ -168,6 +168,25 @@ nav, .dropdown-menu {
 
 .progress-bar {
     background-color: var(--dark-orange);
+}
+
+.exp-heading {
+    color: white;
+    text-align: right;
+    padding-right: 3em;
+    background: var(--dark-gray);
+    border-radius: 5px;
+}
+
+.card {
+    background-color: rgba(32, 32, 32, 0.1);
+}
+
+.experience-text {
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: lighter;
 }
 
 .minimized {
@@ -185,4 +204,5 @@ nav, .dropdown-menu {
 
 .layout-social .layout-icon {
     font-size: 1.8em;
+    text-decoration: none;
 }

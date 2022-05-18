@@ -16,5 +16,6 @@ namespace DotNetCorePortfolio.Data
 
         public DbSet<DotNetCorePortfolio.Models.Experience> Experience { get; set; }
         public DbSet<DotNetCorePortfolio.Models.Skill> Skill { get; set; }
+        public DbSet<DotNetCorePortfolio.Models.Project> Project { get; set; }
     }
 }
