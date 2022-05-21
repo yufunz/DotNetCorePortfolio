@@ -1,24 +1,23 @@
 ﻿<header id="page-hero">
-    <nav id="navbar-site" class="site-nav family-serif navbar navbar-dark navbar-expand-md fixed-top">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#togglerNav" aria-controls="togglerNav"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="nav-brand-text navbar-brand" href="#page-hero">
-          <i class="bi bi-code-square"></i><span id="hero-text" class="d-inline d-md-none d-lg-inline"> yufuNZ</span>
-        </a>
-        <div class="collapse navbar-collapse" id="togglerNav">
-          <div class="navbar-nav ms-auto">
-            @Html.ActionLink("Home", "Index", "Home", null, null, "page-hero", null, new { @class = "nav-item nav-link"})
-            @Html.ActionLink("About", "Index", "Home", null, null, "page-about", null, new { @class = "nav-item nav-link"})
-            @Html.ActionLink("Skills", "Index", "Home", null, null, "page-skill", null, new { @class = "nav-item nav-link"})
-            @Html.ActionLink("Projects", "Index", "Home", null, null, "page-project", null, new { @class = "nav-item nav-link"})
-            @Html.ActionLink("Experiences", "Index", "Home", null, null, "page-experience", null, new { @class = "nav-item nav-link"})
-            @Html.ActionLink("Contact", "Index", "Home", null, null, "page-contact", null, new { @class = "nav-item nav-link"})
-          </div><!-- navbar-nav -->
-        </div><!-- collapse -->
-      </div><!-- container -->
+    <nav id="navbar-site" class="site-nav family-serif navbar navbar-expand-md navbar-toggleable-md navbar-dark fixed-top">
+        <div class="container">
+            <a class="nav-brand-text navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <i class="bi bi-code-square"></i><span id="hero-text" class="d-inline d-md-none d-lg-inline"> yufuNZ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse ">
+                <div class="navbar-nav ms-auto">
+                    @Html.ActionLink("Home", "Index", "Home", null, null, "page-hero", null, new { @class = "nav-item nav-link"})
+                    @Html.ActionLink("About", "Index", "Home", null, null, "page-about", null, new { @class = "nav-item nav-link"})
+                    @Html.ActionLink("Skills", "Index", "Home", null, null, "page-skill", null, new { @class = "nav-item nav-link"})
+                    @Html.ActionLink("Projects", "Index", "Home", null, null, "page-project", null, new { @class = "nav-item nav-link"})
+                    @Html.ActionLink("Experiences", "Index", "Home", null, null, "page-experience", null, new { @class = "nav-item nav-link"})
+                    @Html.ActionLink("Contact", "Index", "Home", null, null, "page-contact", null, new { @class = "nav-item nav-link"})
+                </div><!-- navbar-nav -->
+            </div>
+        </div>
     </nav>
-  </header>
+</header>

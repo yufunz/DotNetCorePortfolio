@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+
 namespace PagedList
 {
     public class PagedList<T> : List<T>

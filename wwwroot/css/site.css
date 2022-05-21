@@ -220,3 +220,7 @@ nav, .dropdown-menu {
     color: #fff;
     background-color: var(--dark-orange);
 }
+
+.pagination {
+    background-color: white;
+}
