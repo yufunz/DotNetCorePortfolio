@@ -103,6 +103,24 @@
     <div class="container py-3">
         <h2 class="mb-5 page-heading">Contact</h2>
         <div class="container">
+            @if (TempData["MessageSent"] is not null)
+            {   
+                <div class="row">
+                @if ((bool)TempData["MessageSent"])
+                {
+                    <div class="alert alert-success" role="alert">
+                        Your message has been sent!
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-warning" role="alert">
+                        Ooops, something went wrong!      
+                    </div>
+                }
+                </div>
+            }
+
             <div class="row">
                 <div class="col-lg-6 mx-auto card card-body mb-5 card-form">
                    <form asp-controller="Contact" asp-action="LeaveMessage" method="post">

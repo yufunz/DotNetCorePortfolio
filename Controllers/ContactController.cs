@@ -34,10 +34,12 @@ namespace DotNetCorePortfolio.Controllers
             {
                 _context.SaveChanges();
                 ViewData["Message"] = $"A message from {fullname}, {email} has been sent successfully. Message Body: {message}";
+                TempData["MessageSent"] = true;
             }
             catch (Exception ex)
             {
                 ViewData["Message"] = $"Oops, something went wrong! {ex.Message}";
+                TempData["MessageSent"] = false;
             }
 
             return RedirectToAction("Index", "Home", "page-contact");

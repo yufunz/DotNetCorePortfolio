@@ -24,6 +24,7 @@ body {
     background-color: #fff;
     font-weight: 400;
     background-image: url(../img/triangle_bg.png);
+    position: relative;
 }
 
 .site-banner {
