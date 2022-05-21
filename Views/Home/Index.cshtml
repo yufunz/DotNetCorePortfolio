@@ -79,21 +79,53 @@
 <!-- project -->
 <!-- Experience -->
 <section class="py-5 experience" id="page-experience">
-    <div class="container py3">
+    <div class="container py-3">
         <h2 class="mb-5 page-heading">Experiences</h2>
+        <div class="container">
         @foreach (Experience experience in Model.ExperienceModel)
         {
             <div class="row mb-3">
                 <div class="col-md-3 p-3 exp-heading">
                     <h4>@experience.Title</h4>
-                    <h5 class="fs-6">@experience.Duration</h5>
+                    <h5 class="fs-6 mb-0">@experience.Duration</h5>
                 </div>
                 <div class="col-md-9 mt-4">
                     <p class="experience-text">@experience.Description</p>
                 </div>
             </div>
         }
+        </div>
     </div>
 </section>
 <!-- Experience -->
+<!-- Contact -->
+<section class="py-5 contact" id="page-contact">
+    <div class="container py-3">
+        <h2 class="mb-5 page-heading">Contact</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto card card-body mb-5 card-form">
+                   <form asp-controller="Contact" asp-action="LeaveMessage" method="post">
+                        <div class="pb-4 pt-2 row g-0">
+                            <div class="form-floating col pe-4">
+                                <input type="email" class="form-control" id="Email" name="Email" placeholder="name@example.com" required>
+                                <label class="form-label text-muted" for="Email">Email address</label>
+                            </div>
+                            <div class="form-floating col">
+                                <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Your Name">
+                                <label class="form-label text-muted" for="FullName">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="pb-4 form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="Message" name="Message" style="height: 100px"></textarea>
+                            <label class="form-label text-muted" for="Message">Message</label>
+                        </div>
+                        <div class="pb-2"><button type="submit" class="btn btn-light text-uppercase">send a message</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact -->
 

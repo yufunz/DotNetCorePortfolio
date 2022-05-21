@@ -28,6 +28,7 @@
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "DockerfileRunArguments": "-v C:\\Users\\yuhei\\source\\repos\\DotNetCorePortfolio\\db:/app/db",
       "publishAllPorts": true,
       "useSSL": true
     }

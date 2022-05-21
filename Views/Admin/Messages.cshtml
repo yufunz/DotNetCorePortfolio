@@ -1,0 +1,26 @@
+﻿@model IEnumerable<DotNetCorePortfolio.Models.Message>
+
+@{
+    ViewData["Title"] = "Messages Review";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb ps-5 pt-2 pb-2 bg-light border-bottom">
+        <li class="breadcrumb-item active" aria-current="page">Home / @ViewData["Title"]</li>
+    </ol>
+</nav>
+
+@foreach (var item in Model)
+{
+    <div class="row justify-content-md-center lh-base">
+        <div class="col-3">
+            <ul class="list-unstyled">
+                <li>@item.Id . @Html.DisplayFor(modelItem => item.FullName)</li>
+                <li class="text-black-50">@Html.DisplayFor(modelItem => item.Email)</li>
+                <li class="text-black-50">@Html.DisplayFor(modelItem => item.CreatedAt)</li>
+            </ul>
+        </div>
+        <div class="col-8">@Html.DisplayFor(modelItem => item.Body)</div>
+    </div>
+}

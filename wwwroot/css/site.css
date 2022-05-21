@@ -185,7 +185,6 @@ nav, .dropdown-menu {
 .experience-text {
     padding-left: 20px;
     font-size: 20px;
-    line-height: 40px;
     font-weight: lighter;
 }
 
@@ -205,4 +204,19 @@ nav, .dropdown-menu {
 .layout-social .layout-icon {
     font-size: 1.8em;
     text-decoration: none;
+}
+
+.form-control:focus {
+    border: 2px solid var(--dark-orange);
+    box-shadow: none;
+}
+
+.btn {
+    color: #fff;
+    background-color: var(--dark-gray);
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: var(--dark-orange);
 }
