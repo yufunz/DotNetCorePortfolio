@@ -15,6 +15,7 @@ RUN dotnet build "DotNetCorePortfolio.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "DotNetCorePortfolio.csproj" -c Release -o /app/publish
+COPY "" "/app/publish"
 
 FROM base AS final
 WORKDIR /app
