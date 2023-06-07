@@ -225,3 +225,8 @@ nav, .dropdown-menu {
 .pagination {
     background-color: white;
 }
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}

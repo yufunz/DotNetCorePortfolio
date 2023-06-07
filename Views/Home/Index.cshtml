@@ -68,7 +68,12 @@
                         <img src="@project.Thumbnail" alt="@project.Title" class="card-img-top" />
                         <div class="card-body">
                             <h5 class="card-title">@project.Title</h5>
-                            <p class="card-text">@project.Description</p>
+                            <p class="card-text">@project.Description
+                                @if (!String.IsNullOrEmpty(project.Url))
+                                {
+                                    <a href="@project.Url" class="stretched-link"></a>
+                                }
+                            </p>
                         </div>
                     </div>
                 </div>

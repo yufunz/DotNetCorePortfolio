@@ -29,7 +29,7 @@ namespace DotNetCorePortfolio.Data
                 },
                 new Skill
                 {
-                    Name = "Java",
+                    Name = "TypeScript",
                     Percentage = 70
                 },
                 new Skill
@@ -44,7 +44,7 @@ namespace DotNetCorePortfolio.Data
                 },
                 new Skill
                 {
-                    Name = "HTML5/CSS3",
+                    Name = "HTML/CSS/Bootstrap",
                     Percentage = 70
                 },
                 new Skill 
@@ -63,13 +63,14 @@ namespace DotNetCorePortfolio.Data
                 {
                     Title = "The Old Market Garage",
                     Thumbnail = "img/theoldmarketgarage.jpg",
-                    Description = "Your local shop for sustainable, ethical, and eco-friendly shopping."
+                    Description = "Business website for a local shop for sustainable, ethical, and eco-friendly shopping."
                 },
                 new Project
                 {
                     Title = "KO Beauty",
                     Thumbnail = "img/kobeauty.jpg",
-                    Description = "Nails & Eyelashes beauty salon that is affordable to everyone in the local community."
+                    Description = "E-commerse website for a beauty salon that is affordable to everyone in the local community.",
+                    Url = "https://kobeauty.nz/"
                 },
                 new Project
                 {
